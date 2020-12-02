@@ -9,7 +9,7 @@ class Game:
         
         self.missed = 0
         self.phrases = [
-        Phrase("I am the master of my own bladder"),
+        Phrase("how the turntables"),
         Phrase("how you doing"),
         Phrase("I am awesome"),
         Phrase("we were on a break"), 
@@ -33,7 +33,7 @@ class Game:
     def game_over(self):
         if self.missed == 5:
             print("Oh no! You lost! :( ")
-        elif Phrase.check_complete(self.active_phrase, self.guesses) == True:
+        elif self.active_phrase.check_complete(self.guesses) == True:
             print("Congratulations! You won!")
 
 
@@ -53,7 +53,7 @@ class Game:
 
     def start(self):
         self.welcome()
-        while self.missed < 5 and Phrase.check_complete(self.active_phrase, self.guesses) == False:
+        while self.missed < 5 and self.active_phrase.check_complete(self.guesses) == False:
             print(f"Number missed: {self.missed}")
             print("\n")
             Phrase.display(self.active_phrase, self.guesses)
