@@ -17,11 +17,15 @@ class Phrase:
         
    #This method needs to use user_guess and return True if correct, and False if incorrect
     def check_guess(self, guess):
+        return guess in self.phrase  
+    
+    def check_complete(self, guesses):
         for letter in self.phrase:
-            if guess == letter:
-                return True
-            elif guess != letter:
+            if letter not in guesses:
                 return False
+        return True    
+                
+          
 
 
           

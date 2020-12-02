@@ -12,7 +12,6 @@ if __name__ =='__main__':
         print(f'The phrase is: {phrase_object.phrase}')
     
     game = Game()
-    print(game.active_phrase.phrase)
     game.start()
     
     
