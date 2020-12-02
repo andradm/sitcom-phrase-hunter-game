@@ -1,4 +1,3 @@
-# Create your Game class logic in here.
 from phrase import Phrase
 import random
 
@@ -30,7 +29,6 @@ class Game:
         self.guess = input("Enter a letter: ")
         return self.guess
      
-
 
     def game_over(self):
         if self.missed == 5:
